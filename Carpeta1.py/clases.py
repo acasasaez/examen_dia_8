@@ -1,38 +1,81 @@
-class vehiculo(): 
-    def __init__(self, ruedas, color):
-        self.ruedas = ruedas
+#Ejerciico de herencia simple
+class vehiculo():
+    def __init__(self, color, ruedas):
         self.color = color
+        self.ruedas = ruedas
         
     def __str__(self):
-        return "X"
+        return "Color {}, {} ruedas".format(self.color, self.ruedas)
 
-    def correr(self):
-        print("Corriendo")
+    def set_color(self, color):
+        self.color = color
+    def get_color(self):
+        return self.color
+    
+    def set_ruedas(self, ruedas):
+        self.ruedas = ruedas
+    def get_ruedas(self):
+        return self.ruedas
+
+
+
+
 
 class coche(vehiculo):
-    def __init__(self, ruedas, color, puertas):
-        super().__init__(ruedas, color)
-        self.puertas = puertas
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+        super().__init__(color, ruedas)
+        self.velocidad = velocidad
+        self.cilindrada = cilindrada
     
-    def correr(self):
-        print ("Corriendo a 100km/h")
+    def __str__(self):
+        return super().__str__() + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
-class feo (vehiculo):
-    def __init__(self, ruedas, color, puertas):
-        super().__init__(ruedas, color)
-        self.puertas = puertas
-    
-    def correr(self):
-        print ("Corriendo a 200km/h")
+    def set_velocidad(self, velocidad):
+        self.velocidad = velocidad
+    def get_velocidad(self):
+        return self.velocidad
 
-class ibiza (coche, feo):
-    def __init__(self, ruedas, color, puertas, marca):
-        coche.__init__(ruedas, color, puertas)
-        self.marca = marca
+    def set_cilindrada(self, cilindrada):
+        self.cilindrada = cilindrada
+    def get_cilindrada(self):
+        return self.cilindrada
 
-    def correr(self):
-        for i in range (5):
-            super().correr()
+class bicicleta(vehiculo):  
+    def __init__(self, color, ruedas, tipo):
+        super().__init__(color, ruedas)
+        self.tipo = tipo
+        
+    def __str__(self):
+        return super().__str__() + ", {}".format(self.tipo)
 
-Manolo =ibiza(4, "rojo", 5, "Seat")
-Manolo.correr()
+    def set_tipo(self, tipo):
+        self.tipo = tipo
+    def get_tipo(self):
+        return self.tipo
+
+class camion(vehiculo):
+    def __init__(self, color, ruedas, carga):
+        super().__init__(color, ruedas)
+        self.carga = carga
+        
+    def __str__(self):
+        return super().__str__() + ", {} kg".format(self.carga)
+
+class motocicleta(vehiculo):
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+        super().__init__(color, ruedas)
+        self.velocidad = velocidad
+        self.cilindrada = cilindrada
+        
+    def __str__(self):
+        return super().__str__() + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
+
+    def set_velocidad(self, velocidad):
+        self.velocidad = velocidad
+    def get_velocidad(self):
+        return self.velocidad
+
+    def set_cilindrada(self, cilindrada):
+        self.cilindrada = cilindrada
+    def get_cilindrada(self):
+        return self.cilindrada

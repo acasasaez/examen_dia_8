@@ -79,3 +79,4 @@ class motocicleta(vehiculo):
         self.cilindrada = cilindrada
     def get_cilindrada(self):
         return self.cilindrada
+

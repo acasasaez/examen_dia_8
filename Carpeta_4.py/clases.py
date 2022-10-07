@@ -32,5 +32,4 @@ class producto ():
         return f"Nuestro producto tiene: Codigo: {self.codigo}, Nombre: {self.nombre}, Precio: {self.precio}, Tipo: {self.tipo}"
        
 
-hola = producto(1, "hola", 2, "tipo")
-print(hola.__str__())
+

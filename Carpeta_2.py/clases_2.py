@@ -16,8 +16,4 @@ class Alumno():
     def get_nota(self):
         return self.nota
 
-    def calificacion (self ):
-        if self.nota >= 5:
-                return "Aprobado"
-        else:
-                return "Suspenso"
+ 

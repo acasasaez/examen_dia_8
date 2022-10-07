@@ -5,25 +5,17 @@ Ruben = clases_2.Alumno("Ruben", 10)
 
 
 
-def notas(alumno):
-    if alumno.get_nota() < 5:
-        print("Suspenso") 
-    elif alumno.get_nota() < 7:
-        print ("Aprobado")
-    elif alumno.get_nota() < 9:
-        print ("Notable")
-    else:
-        print ("Sobresaliente")
+
 
 def inicio():
     print("Si quieres saber la nota de un alumno, introduce su nombre")
     nombre = input(">")
     if nombre == Maria.get_nombre():
-        notas(Maria)
+        Maria.notas()
     elif nombre == Juan.get_nombre():
-        notas(Juan)
+        Juan.notas()
     elif nombre == Ruben.get_nombre():
-        notas(Ruben)
+        Ruben.notas()
     else:
         print("No se ha encontrado el alumno")
         inicio()

@@ -16,4 +16,12 @@ class Alumno():
     def get_nota(self):
         return self.nota
 
- 
+    def notas(self):
+        if self.nota < 5:
+            print("Suspenso") 
+        elif self.nota < 7:
+            print ("Aprobado")
+        elif self.nota < 9:
+            print ("Notable")
+        else:
+            print ("Sobresaliente")

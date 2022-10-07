@@ -10,3 +10,14 @@ class Alumno():
         self.nombre = nombre
     def get_nombre(self):
         return self.nombre
+
+    def set_nota(self, nota):
+        self.nota = nota 
+    def get_nota(self):
+        return self.nota
+
+    def calificacion (self ):
+        if self.nota >= 5:
+                return "Aprobado"
+        else:
+                return "Suspenso"

@@ -29,7 +29,7 @@ class producto ():
         return self.tipo
 
     def __str__(self):
-        return f"Nuestro producto tiene: Codigo: {self.codigo}/n, Nombre: {self.nombre}, Precio: {self.precio}, Tipo: {self.tipo}"
+        return f"Nuestro producto tiene: Codigo: {self.codigo}, Nombre: {self.nombre}, Precio: {self.precio}, Tipo: {self.tipo}"
        
 
 hola = producto(1, "hola", 2, "tipo")

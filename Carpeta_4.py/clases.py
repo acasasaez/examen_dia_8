@@ -1,3 +1,6 @@
+
+
+
 class producto ():
     def __init__ (self, codigo, nombre, precio, tipo):
         self.codigo = codigo
@@ -25,4 +28,9 @@ class producto ():
     def get_tipo(self):
         return self.tipo
 
-    
+    def __str__(self):
+        return f"Nuestro producto tiene: Codigo: {self.codigo}/n, Nombre: {self.nombre}, Precio: {self.precio}, Tipo: {self.tipo}"
+       
+
+hola = producto(1, "hola", 2, "tipo")
+print(hola.__str__())
